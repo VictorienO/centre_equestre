@@ -35,8 +35,8 @@ public class Cavalier {
     )
     private List<Cours> cours;
 
-    public Cavalier(int id_cav, String nom, String prenom, String mail, String date_naiss, int niveau, List<Cours> cours) {
-        this.id_cav = id_cav;
+    public Cavalier(String nom, String prenom, String mail, String date_naiss, int niveau, List<Cours> cours) {
+
         this.nom = nom;
         this.prenom = prenom;
         this.mail = mail;

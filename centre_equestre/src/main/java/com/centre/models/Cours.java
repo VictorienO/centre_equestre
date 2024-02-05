@@ -36,8 +36,7 @@ public class Cours {
 
     public Cours(){}
 
-    public Cours(int id_cours, String discipline, String date_cours, String heure, float duree, int niveau_requis, int nbr_cavalier_max, String prof, List<Cavalier> cavaliers) {
-        this.id_cours = id_cours;
+    public Cours(String discipline, String date_cours, String heure, float duree, int niveau_requis, int nbr_cavalier_max, String prof, List<Cavalier> cavaliers) {
         this.discipline = discipline;
         this.date_cours = date_cours;
         this.heure = heure;

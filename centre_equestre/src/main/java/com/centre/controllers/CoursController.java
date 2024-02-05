@@ -35,7 +35,7 @@ public class CoursController {
         List<Cavalier> listeCav1 = new ArrayList<>();
         listeCav1.add(victorien);
         listeCav1.add(claire);
-        Cours coursGalop = new Cours(1,"Galop", "03/02/2024", "14h30", 2.5F, 1, 8, "JeanJacques", listeCav1);
+        Cours coursGalop = new Cours("Galop", "03/02/2024", "14h30", 2.5F, 1, 8, "JeanJacques", listeCav1);
         model.addAttribute("mycours", coursGalop); // Ajout au modèle
         coursService.save(coursGalop);
         return "mycours"; //Envoi vers la vue
