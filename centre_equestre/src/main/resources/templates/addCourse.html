@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un cours</title>
+</head>
+<body>
+<h1>Ajouter un cours</h1>
+<form th:action="@{/addCourse}" th:object="${addCourse}" method="post">
+    <label>Discipline :</label>
+    <input type="text" th:field="*{discipline}" required>
+
+    <label>Date du cours :</label>
+    <input type="text" th:field="*{date_cours}" placeholder="YYYY-MM-DD" required>
+
+    <label>Heure :</label>
+    <input type="text" th:field="*{heure}" required>
+
+    <label>Durée :</label>
+    <input type="text" th:field="*{duree}" required>
+
+    <label>Niveau requis :</label>
+    <input type="text" th:field="*{niveau_requis}" required>
+
+    <label>Nombre maximum de participants :</label>
+    <input type="text" th:field="*{nbr_cavalier_max}" required>
+
+    <label>Professeur :</label>
+    <input type="text" th:field="*{prof}" required>
+
+
+    <label>Cavaliers :</label>
+    <select th:field="*{cavaliers}" multiple="multiple">
+        <option th:each="cavalier : ${allCavaliers}" th:value="${cavalier.id}" th:text="${cavalier.nom}"></option>
+    </select>
+
+    <button type="submit">Ajouter le cours</button>
+</form>
+</body>
+</html>
