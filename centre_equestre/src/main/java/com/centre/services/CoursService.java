@@ -19,9 +19,7 @@ public class CoursService {
         return (List<Cours>) repository.findAll();
     }
 
-    public void save(Cours cours) {  // pas testé avec persist !
-        // repository.save(cours);
-    }
+    public void save(Cours cours) { repository.save(cours); }
 
     public Optional<Cours> findById(Long id) {
         return repository.findById(id);

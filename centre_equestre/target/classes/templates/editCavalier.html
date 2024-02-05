@@ -1,0 +1,21 @@
+<!-- resources/templates/cavalier/edit.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditer un Cavalier</title>
+</head>
+<body>
+<h2>Éditer un Cavalier</h2>
+<form th:object="${cavalier}" th:action="@{/cavaliers/edit}" method="post">
+    <input type="hidden" th:field="*{id_cav}"/>
+    <label>Nom: <input type="text" th:field="*{nom}"/></label><br/>
+    <label>Prénom: <input type="text" th:field="*{prenom}"/></label><br/>
+    <!-- Ajoutez d'autres champs selon vos besoins -->
+    <button type="submit">Enregistrer</button>
+</form>
+<a href="/cavaliers">Retour à la liste</a>
+</body>
+</html>
