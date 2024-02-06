@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Cavalier</title>
+</head>
+<body>
+<h1>Ajouter un Cavalier</h1>
+<form th:action="@{/cavaliers/addCavalier}" th:object="${cavalier}" method="post">
+    <label>Nom :</label>
+    <input type="text" th:field="*{nom}" required>
+
+    <label>Prénom :</label>
+    <input type="text" th:field="*{prenom}" required>
+
+    <label>Mail :</label>
+    <input type="text" th:field="*{mail}" required>
+
+    <label>Date de naissance :</label>
+    <input type="text" th:field="*{date_naiss}" placeholder="YYYY-MM-DD" required>
+
+    <label>Niveau :</label>
+    <input type="text" th:field="*{niveau}" required>
+
+    <!-- Vous pouvez ajouter d'autres champs selon vos besoins -->
+
+    <button type="submit">Ajouter le Cavalier</button>
+</form>
+</body>
+</html>
