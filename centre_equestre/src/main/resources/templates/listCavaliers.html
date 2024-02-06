@@ -1,0 +1,37 @@
+<!-- resources/templates/cavalier/listCavaliers.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Cavaliers</title>
+</head>
+<body>
+<h2>Liste des Cavaliers</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cavalier : ${cavaliers}">
+        <td th:text="${cavalier.id_cav}"></td>
+        <td th:text="${cavalier.nom}"></td>
+        <td th:text="${cavalier.prenom}"></td>
+        <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        <td>
+            <a th:href="@{/cavaliers/edit/{id}(id=${cavalier.id_cav})}">Modifier</a>
+            <a th:href="@{/cavaliers/delete/{id}(id=${cavalier.id_cav})}">Supprimer</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/cavaliers/addCavalier}">Ajouter un Cavalier</a>
+</body>
+</html>
