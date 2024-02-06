@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+</head>
+<body th:style="'background-image: url(\'/ressources/fond.jpg\'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;'">
+
+<h1>Page d'accueil</h1>
+
+<a th:href="@{/addCourse}">Ajouter un cours</a>
+<a th:href="@{/allMyCourses}">Tous mes cours</a>
+<a th:href="@{/mycours}">Détails du cours</a>
+</body>
+
+<style>
+    body{
+    background-color:red;
+    }
+</style>
+</html>
