@@ -15,7 +15,7 @@
         <th>ID</th>
         <th>Nom</th>
         <th>Prénom</th>
-        <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        <!-- Ajout d'autres colonnes si besoins -->
         <th>Actions</th>
     </tr>
     </thead>
@@ -24,7 +24,7 @@
         <td th:text="${cavalier.id_cav}"></td>
         <td th:text="${cavalier.nom}"></td>
         <td th:text="${cavalier.prenom}"></td>
-        <!-- Ajoutez d'autres colonnes selon vos besoins -->
+        <!-- Ajout d'autres colonnes si besoins -->
         <td>
             <a th:href="@{/cavaliers/edit/{id}(id=${cavalier.id_cav})}">Modifier</a>
             <a th:href="@{/cavaliers/delete/{id}(id=${cavalier.id_cav})}">Supprimer</a>
