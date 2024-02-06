@@ -1,4 +1,4 @@
-<!-- resources/templates/cavalier/list.html -->
+<!-- resources/templates/cavalier/listCavaliers.html -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -32,6 +32,6 @@
     </tr>
     </tbody>
 </table>
-<a href="/cavaliers/edit">Ajouter un Cavalier</a>
+<a th:href="@{/cavaliers/addCavalier}">Ajouter un Cavalier</a>
 </body>
 </html>

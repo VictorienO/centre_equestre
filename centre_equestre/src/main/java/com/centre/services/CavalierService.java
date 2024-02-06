@@ -13,9 +13,7 @@ public class CavalierService {
     @Autowired
     private CavalierRepo repository;
 
-    public List<Cavalier> findAll() {
-        return (List<Cavalier>) repository.findAll();
-    }
+    public List<Cavalier> findAll() { return (List<Cavalier>) repository.findAll(); }
 
     public void save(Cavalier cavalier) {  // pas testé avec persist !
         repository.save(cavalier);
