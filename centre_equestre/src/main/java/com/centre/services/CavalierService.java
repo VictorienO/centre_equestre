@@ -19,6 +19,10 @@ public class CavalierService {
         repository.save(cavalier);
     }
 
+    public void edit(Cavalier cavalier) {  // pas testé avec persist !
+        repository.save(cavalier);
+    }
+
     public Optional<Cavalier> findById(Long id) {
         return repository.findById(id);
     }

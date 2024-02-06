@@ -21,13 +21,13 @@ public class CavalierController {
     public String listCavaliers(Model model) {
         List<Cavalier> cavaliers = cavalierService.findAll();
         model.addAttribute("cavaliers", cavaliers);
-        return "listCavaliers";
+        return "cavaliers/listCavaliers";
     }
 
     @GetMapping("/addCavalier")
     public String addCavalierForm(Model model) {
         model.addAttribute("cavalier", new Cavalier());
-        return "addCavalier"; // Assurez-vous d'avoir une vue nommée "addCavalier.html"
+        return "cavaliers/addCavalier";
     }
 
     @PostMapping("/addCavalier")
@@ -36,17 +36,17 @@ public class CavalierController {
         return "redirect:/cavaliers"; // Redirection vers la liste des cavaliers
     }
 
-    @GetMapping("/editCavaliers/{id}")
+    @GetMapping("/editCavalier/{id}")
     public String editCavalierForm(@PathVariable Long id, Model model) {
         Optional<Cavalier> cavalier = cavalierService.findById(id);
         model.addAttribute("cavalier", cavalier.orElse(new Cavalier())); // Si l'id n'existe pas, crée un nouvel objet Cavalier
-        return "editCavalier";
+        return "cavaliers/editCavalier";
     }
 
-    @PostMapping("/editCavaliers")
+    @PostMapping("/editCavalier")
     public String editCavalier(@ModelAttribute Cavalier cavalier) {
-        cavalierService.save(cavalier);
-        return "redirect:/cavaliers";
+        cavalierService.edit(cavalier);
+        return "redirect:/cavaliers"; // Redirection vers la liste des cavaliers
     }
 
     @GetMapping("/delete/{id}")
