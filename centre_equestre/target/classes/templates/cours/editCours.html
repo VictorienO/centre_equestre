@@ -54,6 +54,9 @@
 <body>
 <h2>Éditer un Cours</h2>
 <form th:action="@{/cours/editCours}" th:object="${cours}" method="post">
+    <!-- Champ caché pour l'ID du cours -->
+    <input type="hidden" th:field="*{id_cours}" />
+
     <label>Discipline: <input type="text" th:field="*{discipline}" placeholder="${cours.discipline}" /></label><br/>
     <label>Date : <input type="text" th:field="*{date}" placeholder="${cours.date}" /></label><br/>
     <label>Heure : <input type="text" th:field="*{heure}" placeholder="${cours.heure}" /></label><br/>

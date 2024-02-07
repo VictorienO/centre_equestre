@@ -46,7 +46,7 @@ public class Cavalier {
 
     public Cavalier(){}
 
-    public int getId_cav() {
+    public long getId_cav() {
         return id_cav;
     }
 
