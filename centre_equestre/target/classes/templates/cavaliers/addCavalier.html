@@ -59,15 +59,16 @@
     <input type="text" th:field="*{prenom}" required>
 
     <label>Mail :</label>
-    <input type="text" th:field="*{mail}" required>
+    <input type="text" th:field="*{mail}" placeholder="----@--.-" required>
 
     <label>Date de naissance :</label>
-    <input type="text" th:field="*{date_naiss}" placeholder="YYYY-MM-DD" required>
+    <input type="text" th:field="*{date_naiss}" placeholder="DD/MM/YYYY" required>
 
     <label>Niveau :</label>
     <input type="text" th:field="*{niveau}" required>
 
     <button type="submit" class="custom-button">Ajouter le Cavalier</button>
 </form>
+<a href="/cavaliers">Annuler</a>
 </body>
 </html>

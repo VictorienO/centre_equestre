@@ -14,8 +14,8 @@ public class Cours {
     private int id_cours;
     @Column(name = "discipline")
     private String discipline;
-    @Column(name = "date_cours")
-    private String date_cours;
+    @Column(name = "date")
+    private String date;
     @Column(name = "heure")
     private String heure;
     @Column(name = "duree")
@@ -24,8 +24,8 @@ public class Cours {
     private int niveau_requis;
     @Column(name = "nbr_cavalier_max")
     private int nbr_cavalier_max;
-    @Column(name = "prof")
-    private String prof;
+    @Column(name = "moniteur")
+    private String motineur;
     @ManyToMany
     @JoinTable(
             name = "cours_cavalier",
@@ -36,14 +36,14 @@ public class Cours {
 
     public Cours(){}
 
-    public Cours(String discipline, String date_cours, String heure, float duree, int niveau_requis, int nbr_cavalier_max, String prof, List<Cavalier> cavaliers) {
+    public Cours(String discipline, String date, String heure, float duree, int niveau_requis, int nbr_cavalier_max, String motineur, List<Cavalier> cavaliers) {
         this.discipline = discipline;
-        this.date_cours = date_cours;
+        this.date = date;
         this.heure = heure;
         this.duree = duree;
         this.niveau_requis = niveau_requis;
         this.nbr_cavalier_max = nbr_cavalier_max;
-        this.prof = prof;
+        this.motineur = motineur;
         this.cavaliers = cavaliers;
     }
 
@@ -63,12 +63,12 @@ public class Cours {
         this.discipline = discipline;
     }
 
-    public String getDate_cours() {
-        return date_cours;
+    public String getDate() {
+        return date;
     }
 
-    public void setDate_cours(String date_cours) {
-        this.date_cours = date_cours;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getHeure() {
@@ -103,12 +103,12 @@ public class Cours {
         this.nbr_cavalier_max = nbr_cavalier_max;
     }
 
-    public String getProf() {
-        return prof;
+    public String getMotineur() {
+        return motineur;
     }
 
-    public void setProf(String prof) {
-        this.prof = prof;
+    public void setMotineur(String motineur) {
+        this.motineur = motineur;
     }
 
     public List<Cavalier> getCavaliers() {
@@ -124,24 +124,24 @@ public class Cours {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cours cours = (Cours) o;
-        return Float.compare(duree, cours.duree) == 0 && niveau_requis == cours.niveau_requis && nbr_cavalier_max == cours.nbr_cavalier_max && Objects.equals(discipline, cours.discipline) && Objects.equals(date_cours, cours.date_cours) && Objects.equals(heure, cours.heure) && Objects.equals(prof, cours.prof) && Objects.equals(cavaliers, cours.cavaliers);
+        return Float.compare(duree, cours.duree) == 0 && niveau_requis == cours.niveau_requis && nbr_cavalier_max == cours.nbr_cavalier_max && Objects.equals(discipline, cours.discipline) && Objects.equals(date, cours.date) && Objects.equals(heure, cours.heure) && Objects.equals(motineur, cours.motineur) && Objects.equals(cavaliers, cours.cavaliers);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_cours, discipline, date_cours, heure, duree, niveau_requis, nbr_cavalier_max, prof, cavaliers);
+        return Objects.hash(id_cours, discipline, date, heure, duree, niveau_requis, nbr_cavalier_max, motineur, cavaliers);
     }
 
     @Override
     public String toString() {
         return "Cours{" +
                 "discipline='" + discipline + '\'' +
-                ", date_cours='" + date_cours + '\'' +
+                ", date='" + date + '\'' +
                 ", heure='" + heure + '\'' +
                 ", duree=" + duree +
                 ", niveau_requis=" + niveau_requis +
                 ", nbr_cavalier_max=" + nbr_cavalier_max +
-                ", prof='" + prof + '\'' +
+                ", motineur='" + motineur + '\'' +
                 ", cavaliers=" + cavaliers +
                 '}';
     }

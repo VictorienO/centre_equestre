@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9c31289-ff5b-4f15-b711-2f0795f5d773" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/addCours.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db_h2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db_h2.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CavalierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CavalierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/services/CoursService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/services/CoursService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/addCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/addCavalier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tests/addCourse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tests/allMyCourses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tests/mycours.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/controllers/CavalierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/controllers/CavalierController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/controllers/CoursController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/controllers/CoursController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/models/Cours.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/models/Cours.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/security/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/security/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/security/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/security/SpringSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/services/CoursService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/services/CoursService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/addCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/addCavalier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/tests/addCourse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/tests/allMyCourses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/tests/mycours.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2c2FL4oB5qzTEwe0sX7CHxunA1o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Claire",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ClaireGirardin/Documents/ENSG/ING3/TSI/JEE/projet/centre_equestre/centre_equestre/src/main/resources/templates/cours"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/cours" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.centre.Application" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.centre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9c31289-ff5b-4f15-b711-2f0795f5d773" name="Changes" comment="" />
+      <created>1707301712504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707301712504</updated>
+    </task>
+    <servers />
+  </component>
+</project>

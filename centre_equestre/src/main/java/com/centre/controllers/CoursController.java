@@ -1,5 +1,6 @@
 package com.centre.controllers;
 
+import com.centre.models.Cavalier;
 import com.centre.models.Cours;
 import com.centre.models.Cours;
 import com.centre.services.CoursService;
@@ -22,24 +23,36 @@ public class CoursController {
     public String listCours(Model model) {
         List<Cours> cours = coursService.findAll();
         model.addAttribute("cours", cours);
-        return "cours/list";
+        return "cours/listCours";
+    }
+
+    @GetMapping("/addCours")
+    public String addCoursForm(Model model) {
+        model.addAttribute("cours", new Cours());
+        return "cours/addCours";
+    }
+
+    @PostMapping("/addCours")
+    public String addCours(@ModelAttribute Cours cours) {
+        coursService.save(cours);
+        return "redirect:/courss"; // Redirection vers la liste des cours
     }
 
     @GetMapping("/editCours/{id}")
-    public String editCoursForm(@PathVariable Long id, Model model) {
+    public String editCavalierForm(@PathVariable Long id, Model model) {
         Optional<Cours> cours = coursService.findById(id);
-        model.addAttribute("cours", cours.orElse(new Cours())); // Si l'id n'existe pas, crée un nouvel objet Cours
+        model.addAttribute("cours", cours.orElse(new Cours())); // Si l'id n'existe pas, création d'un nouvel objet Cours
         return "cours/editCours";
     }
 
     @PostMapping("/editCours")
     public String editCours(@ModelAttribute Cours cours) {
-        coursService.save(cours);
-        return "redirect:/cours";
+        coursService.edit(cours);
+        return "redirect:/cours"; // Redirection vers la liste des cours
     }
 
-    @GetMapping("/deleteCours/{id}")
-    public String deleteCours (@PathVariable Long id) {
+    @GetMapping("/delete/{id}")
+    public String deleteCours(@PathVariable Long id) {
         Optional<Cours> cours = coursService.findById(id);
         cours.ifPresent(c -> coursService.delete(c));
         return "redirect:/cours";

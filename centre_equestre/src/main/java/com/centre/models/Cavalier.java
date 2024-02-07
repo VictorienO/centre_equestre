@@ -36,7 +36,6 @@ public class Cavalier {
     private List<Cours> cours;
 
     public Cavalier(String nom, String prenom, String mail, String date_naiss, int niveau, List<Cours> cours) {
-
         this.nom = nom;
         this.prenom = prenom;
         this.mail = mail;

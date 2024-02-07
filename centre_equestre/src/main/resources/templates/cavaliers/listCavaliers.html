@@ -65,6 +65,9 @@
     <tr>
         <th>Nom</th>
         <th>Prénom</th>
+        <th>Mail</th>
+        <th>Date de naissance</th>
+        <th>Niveau</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -72,6 +75,9 @@
     <tr th:each="cavalier : ${cavaliers}">
         <td th:text="${cavalier.nom}"></td>
         <td th:text="${cavalier.prenom}"></td>
+        <td th:text="${cavalier.mail}"></td>
+        <td th:text="${cavalier.date_naiss}"></td>
+        <td th:text="${cavalier.niveau}"></td>
         <td>
             <a th:href="@{/cavaliers/editCavalier/{id}(id=${cavalier.id_cav})}">Modifier</a>
             <a th:href="@{/cavaliers/delete/{id}(id=${cavalier.id_cav})}">Supprimer</a>
@@ -82,6 +88,10 @@
 
 <div class="add-button-container">
     <a th:href="@{/cavaliers/addCavalier}" class="custom-button">Ajouter un Cavalier</a>
+</div>
+
+<div class="retour-accueil">
+    <a th:href="@{/}" class="custom-button">Retour à l'accueil</a>
 </div>
 
 </body>

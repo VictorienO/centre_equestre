@@ -39,7 +39,7 @@ public class CavalierController {
     @GetMapping("/editCavalier/{id}")
     public String editCavalierForm(@PathVariable Long id, Model model) {
         Optional<Cavalier> cavalier = cavalierService.findById(id);
-        model.addAttribute("cavalier", cavalier.orElse(new Cavalier())); // Si l'id n'existe pas, crée un nouvel objet Cavalier
+        model.addAttribute("cavalier", cavalier.orElse(new Cavalier())); // Si l'id n'existe pas, création d'un nouvel objet Cavalier
         return "cavaliers/editCavalier";
     }
 
