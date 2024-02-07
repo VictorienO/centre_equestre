@@ -18,8 +18,8 @@ public class Cours {
     private String date;
     @Column(name = "heure")
     private String heure;
-    @Column(name = "duree")
-    private float duree;
+    @Column(name = "duree_cours")
+    private String duree_cours;
     @Column(name = "niveau_requis")
     private int niveau_requis;
     @Column(name = "nbr_cavalier_max")
@@ -36,11 +36,11 @@ public class Cours {
 
     public Cours(){}
 
-    public Cours(String discipline, String date, String heure, float duree, int niveau_requis, int nbr_cavalier_max, String motineur, List<Cavalier> cavaliers) {
+    public Cours(String discipline, String date, String heure, String duree_cours, int niveau_requis, int nbr_cavalier_max, String motineur, List<Cavalier> cavaliers) {
         this.discipline = discipline;
         this.date = date;
         this.heure = heure;
-        this.duree = duree;
+        this.duree_cours = duree_cours;
         this.niveau_requis = niveau_requis;
         this.nbr_cavalier_max = nbr_cavalier_max;
         this.motineur = motineur;
@@ -79,12 +79,12 @@ public class Cours {
         this.heure = heure;
     }
 
-    public float getDuree() {
-        return duree;
+    public String getDuree_cours() {
+        return duree_cours;
     }
 
-    public void setDuree(float duree) {
-        this.duree = duree;
+    public void setDuree_cours(String duree_cours) {
+        this.duree_cours = duree_cours;
     }
 
     public int getNiveau_requis() {
@@ -124,12 +124,19 @@ public class Cours {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cours cours = (Cours) o;
-        return Float.compare(duree, cours.duree) == 0 && niveau_requis == cours.niveau_requis && nbr_cavalier_max == cours.nbr_cavalier_max && Objects.equals(discipline, cours.discipline) && Objects.equals(date, cours.date) && Objects.equals(heure, cours.heure) && Objects.equals(motineur, cours.motineur) && Objects.equals(cavaliers, cours.cavaliers);
+        return niveau_requis == cours.niveau_requis &&
+                nbr_cavalier_max == cours.nbr_cavalier_max &&
+                Objects.equals(discipline, cours.discipline) &&
+                Objects.equals(date, cours.date) &&
+                Objects.equals(heure, cours.heure) &&
+                Objects.equals(motineur, cours.motineur) &&
+                Objects.equals(cavaliers, cours.cavaliers) &&
+                Objects.equals(duree_cours, cours.duree_cours);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_cours, discipline, date, heure, duree, niveau_requis, nbr_cavalier_max, motineur, cavaliers);
+        return Objects.hash(id_cours, discipline, date, heure, duree_cours, niveau_requis, nbr_cavalier_max, motineur, cavaliers);
     }
 
     @Override
@@ -138,7 +145,7 @@ public class Cours {
                 "discipline='" + discipline + '\'' +
                 ", date='" + date + '\'' +
                 ", heure='" + heure + '\'' +
-                ", duree=" + duree +
+                ", duree_cours=" + duree_cours +
                 ", niveau_requis=" + niveau_requis +
                 ", nbr_cavalier_max=" + nbr_cavalier_max +
                 ", motineur='" + motineur + '\'' +

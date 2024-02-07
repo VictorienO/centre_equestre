@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9c31289-ff5b-4f15-b711-2f0795f5d773" name="Changes" comment="">
+    <list default="true" id="a785ea37-271e-4aa8-8128-1dcba3ed96b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/services/CavalierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/services/CavalierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/addCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/addCours.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/centre/services/CavalierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/services/CavalierService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/cours/editCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cours/editCours.html" afterDir="false" />
@@ -23,32 +30,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2c2FL4oB5qzTEwe0sX7CHxunA1o" />
+  <component name="ProjectId" id="2c3Q01IXwt6rZbIIDKr6jlXt7JP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Application.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Claire",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ClaireGirardin/Documents/ENSG/ING3/TSI/JEE/projet/centre_equestre/centre_equestre/src/main/resources/templates/cours"
+    "settings.editor.selected.configurable": "preferences.externalResources"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/cours" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.centre.Application" />
@@ -72,7 +72,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
         <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
       </set>
     </attachedChunks>
@@ -80,11 +79,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9c31289-ff5b-4f15-b711-2f0795f5d773" name="Changes" comment="" />
-      <created>1707301712504</created>
+      <changelist id="a785ea37-271e-4aa8-8128-1dcba3ed96b0" name="Changes" comment="" />
+      <created>1707337555462</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707301712504</updated>
+      <updated>1707337555462</updated>
     </task>
     <servers />
   </component>

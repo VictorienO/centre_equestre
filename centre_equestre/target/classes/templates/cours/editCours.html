@@ -54,16 +54,15 @@
 <body>
 <h2>Éditer un Cours</h2>
 <form th:action="@{/cours/editCours}" th:object="${cours}" method="post">
-    <!-- Champ caché pour l'ID du cours -->
-    <input type="hidden" th:field="*{id_cours}" />
-
     <label>Discipline: <input type="text" th:field="*{discipline}" placeholder="${cours.discipline}" /></label><br/>
     <label>Date : <input type="text" th:field="*{date}" placeholder="${cours.date}" /></label><br/>
     <label>Heure : <input type="text" th:field="*{heure}" placeholder="${cours.heure}" /></label><br/>
-    <label>Durée (en h) : <input type="text" th:field="*{duree}" placeholder="${cours.duree}"/></label><br/>
+    <label>Durée (en h) : <input type="text" th:field="*{duree_cours}" placeholder="${cours.duree_cours}"/></label><br/>
     <label>Niveau minimum requis : <input type="text" th:field="*{niveau_requis}" placeholder="${cours.niveau_requis}"/></label><br/>
     <label>Nombre de cavaliers max : <input type="text" th:field="*{nbr_cavalier_max}" placeholder="${cours.nbr_cavalier_max}"/></label><br/>
     <label>Moniteur : <input type="text" th:field="*{motineur}" placeholder="${cours.motineur}"/></label><br/>
+    <!-- Champ caché pour l'ID -->
+    <label><input type="hidden" th:field="*{id_cours}" /></label><br/>
     <button type="submit">Enregistrer</button>
 </form>
 <a href="/cours">Annuler</a>
