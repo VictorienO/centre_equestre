@@ -24,12 +24,15 @@ public class SpringSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http.authorizeHttpRequests(auth -> {
-            auth.requestMatchers("/h2-console/**").permitAll();
-            auth.requestMatchers("/admin").hasRole("ADMIN");
-            auth.requestMatchers("/user").hasRole("USER");
-            auth.anyRequest().authenticated();
-        }).formLogin(Customizer.withDefaults()).build();
+        return http
+                .csrf().disable()
+                .authorizeHttpRequests(auth -> {
+                    auth.requestMatchers("/h2-console/**").permitAll();
+                    auth.requestMatchers("/cavaliers/addCavalier").permitAll();
+                    auth.requestMatchers("/admin").hasRole("ADMIN");
+                    auth.requestMatchers("/user").hasRole("USER");
+                    auth.anyRequest().authenticated();
+                }).formLogin(Customizer.withDefaults()).build();
     }
 
     @Bean

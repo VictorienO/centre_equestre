@@ -83,7 +83,7 @@
         <td th:text="${cours.nbr_cavalier_max}"></td>
         <td th:text="${cours.motineur}"></td>
         <td>
-            <a th:href="@{/cavaliers/{id_cav}/delete/{id_cours}(id_cav=${cavalier.id_cav}, id_cours=${sesCours.id_cours})}">Se désinscrire</a>
+            <a th:href="@{/cavaliers/{id_cav}/delete/{id_cours}(id_cav=${cavalier.id_cav}, id_cours=${cours.id_cours})}">Désinscrire</a>
         </td>
     </tr>
     </tbody>
@@ -98,7 +98,7 @@
         </select>
         <input type="hidden" id="selectedCoursId" name="selectedCoursId"/>
         <input type="hidden" id="id_cav" name="id_cav" th:value="${cavalier.id_cav}"/>
-        <button type="submit" class="custom-button">S'inscrire</button>
+        <button type="submit" class="custom-button">Inscrire</button>
     </form>
 </div>
 
