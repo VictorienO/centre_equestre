@@ -2,13 +2,18 @@ package com.centre.controllers;
 
 import com.centre.models.Cavalier;
 import com.centre.models.Cours;
-import com.centre.models.Cours;
+import com.centre.services.CavalierService;
 import com.centre.services.CoursService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +23,9 @@ public class CoursController {
 
     @Autowired
     private CoursService coursService;
+
+    @Autowired
+    private CavalierService cavalierService;
 
     @GetMapping
     public String listCours(Model model) {
@@ -36,6 +44,28 @@ public class CoursController {
     public String addCours(@ModelAttribute Cours cours) {
         coursService.save(cours);
         return "redirect:/cours"; // Redirection vers la liste des cours
+    }
+
+    @GetMapping("/addMultipleCours")
+    public String addMultipleCoursCSV(Model model) {
+        return "cours/addMultipleCours";
+    }
+
+    @PostMapping("/addMultipleCours")
+    public String addMultipleCours(@RequestParam("file") MultipartFile file) {
+        try (InputStream inputStream = file.getInputStream();
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                Cours cours = new Cours(data[0], data[1], data[2], data[3], Integer.parseInt(data[4]), Integer.parseInt(data[5]), data[6], null);
+                coursService.save(cours);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "redirect:/cavaliers?error=ioException";
+        }
+        return "redirect:/cavaliers";
     }
 
     @GetMapping("/editCours/{id}")

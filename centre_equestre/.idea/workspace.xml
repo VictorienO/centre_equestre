@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a785ea37-271e-4aa8-8128-1dcba3ed96b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styleIndex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/indexAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/db_h2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/db_h2.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/addCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/addCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCoursCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCoursCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/addCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/addCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/addCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/addCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCoursCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCoursCavalier.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
