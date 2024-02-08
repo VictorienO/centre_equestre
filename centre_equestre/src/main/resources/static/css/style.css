@@ -4,9 +4,41 @@ body {
   padding: 0;
   font-family: Arial, sans-serif; /* Utilisation d'une police de caractères similaire */
 }
-h2 {
+h1 {
   text-align: center;
   margin-top: 50px;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanc à moitié transparent */
+  border-radius: 15px; /* Coins arrondis */
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button[type="submit"] {
+  background-color: #102b18; /* Marron foncé */
+  color: white; /* Texte blanc */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+button[type="submit"]:hover {
+  background-color: #3a9d23;
 }
 table {
   width: 80%;
