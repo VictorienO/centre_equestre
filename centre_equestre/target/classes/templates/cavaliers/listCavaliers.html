@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Cavaliers</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
@@ -57,6 +58,7 @@
             margin-top: 20px;
         }
     </style>
+
 </head>
 <body>
 <h2>Liste des Cavaliers</h2>
@@ -81,6 +83,7 @@
         <td>
             <a th:href="@{/cavaliers/editCavalier/{id}(id=${cavalier.id_cav})}">Modifier</a>
             <a th:href="@{/cavaliers/delete/{id}(id=${cavalier.id_cav})}">Supprimer</a>
+            <a th:href="@{/cavaliers/{id}/sesCours(id=${cavalier.id_cav})}">Gérer ses cours</a>
         </td>
     </tr>
     </tbody>
@@ -90,7 +93,7 @@
     <a th:href="@{/cavaliers/addCavalier}" class="custom-button">Ajouter un Cavalier</a>
 </div>
 
-<div class="retour-accueil">
+<div class="retour">
     <a th:href="@{/}" class="custom-button">Retour à l'accueil</a>
 </div>
 

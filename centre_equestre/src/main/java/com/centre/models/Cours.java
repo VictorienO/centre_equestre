@@ -2,6 +2,7 @@ package com.centre.models;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 @Entity
@@ -32,7 +33,7 @@ public class Cours {
             joinColumns = @JoinColumn(name = "id_cours"),
             inverseJoinColumns = @JoinColumn(name = "id_cav")
     )
-    private List<Cavalier> cavaliers;
+    private List<Cavalier> cavaliers = new ArrayList<>();
 
     public Cours(){}
 

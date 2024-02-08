@@ -65,6 +65,10 @@
     <label><input type="hidden" th:field="*{id_cours}" /></label><br/>
     <button type="submit">Enregistrer</button>
 </form>
-<a href="/cours">Annuler</a>
+
+<div class="annuler">
+    <a th:href="@{/cours}" class="custom-button">Annuler</a>
+</div>
+
 </body>
 </html>
