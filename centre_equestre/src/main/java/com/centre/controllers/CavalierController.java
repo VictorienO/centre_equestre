@@ -105,7 +105,7 @@ public class CavalierController {
         }
     }
 
-    @PostMapping("/{id_cav}/edit/{id_cours}")
+    @GetMapping("/{id_cav}/edit/{id_cours}")
     public String addCours(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours) {
         Optional<Cavalier> optionalCavalier = cavalierService.findById(idCav);
         Optional<Cours> optionalCours = coursService.findById(idCours);
@@ -118,10 +118,10 @@ public class CavalierController {
             cavalierService.addCours(cavalier, cours);
 
             // Redirection vers la page des cours du cavalier avec l'ID du cavalier
-            return "redirect:/cavaliers/" + idCav + "/sesCours";
+            return "redirect:/cavaliers/{id_cav}/sesCours";
         } else {
             // Gérer l'erreur si le cavalier ou le cours n'existe pas
-            return "redirect:/cavaliers";
+            return "redirect:/cavaliers?error=ioException";
         }
     }
 

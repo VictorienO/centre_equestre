@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modifier un Cavalier</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-<body>
-<h1>Modifier les informations d'un Cavalier</h1>
-<form th:action="@{/cavaliers/editCavalier}" th:object="${cavalier}" method="post">
-    <label>Nom : <input type="text" th:field="*{nom}" placeholder="${cavalier.nom}" /></label><br/>
-    <label>Prénom : <input type="text" th:field="*{prenom}" placeholder="${cavalier.prenom}" /></label><br/>
-    <label>Mail : <input type="text" th:field="*{mail}" placeholder="${cavalier.mail}" /></label><br/>
-    <label>Date de naissance : <input type="text" th:field="*{date_naiss}" placeholder="${cavalier.date_naiss}"/></label><br/>
-    <label>Niveau : <input type="text" th:field="*{niveau}" placeholder="${cavalier.niveau}"/></label><br/>
-    <!-- Champ caché pour l'ID -->
-    <label><input type="hidden" th:field="*{id_cav}" /></label><br/>
-    <button type="submit">Enregistrer</button>
-</form>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Modifier les informations d'un Cavalier</h1>
+    <form
+      th:action="@{/cavaliers/editCavalier}"
+      th:object="${cavalier}"
+      method="post"
+    >
+      <label
+        >Nom :
+        <input
+          type="text"
+          th:field="*{nom}"
+          placeholder="${cavalier.nom}" /></label
+      ><br />
+      <label
+        >Prénom :
+        <input
+          type="text"
+          th:field="*{prenom}"
+          placeholder="${cavalier.prenom}" /></label
+      ><br />
+      <label
+        >Mail :
+        <input
+          type="text"
+          th:field="*{mail}"
+          placeholder="${cavalier.mail}" /></label
+      ><br />
+      <label
+        >Date de naissance :
+        <input
+          type="text"
+          th:field="*{date_naiss}"
+          placeholder="${cavalier.date_naiss}" /></label
+      ><br />
+      <label
+        >Niveau :
+        <input
+          type="text"
+          th:field="*{niveau}"
+          placeholder="${cavalier.niveau}" /></label
+      ><br />
+      <!-- Champ caché pour l'ID -->
+      <label><input type="hidden" th:field="*{id_cav}" /></label><br />
+      <button type="submit">Enregistrer</button>
+    </form>
 
-<div class="annuler">
-    <a th:href="@{/cavaliers}" class="custom-button">Annuler</a>
-</div>
-
-</body>
+    <div class="annuler">
+      <a th:href="@{/cavaliers}" class="custom-button">Annuler</a>
+    </div>
+  </body>
 </html>
