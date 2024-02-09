@@ -6,7 +6,7 @@ function submitForm(event) {
   var cavalierId = document.getElementById("id_cav").value;
 
   // Construire l'URL avec les valeurs sélectionnées
-  var url = "/cavaliers/" + cavalierId + "/edit/" + selectedCoursId;
+  var url = "/cavaliers/" + cavalierId + "/subscribe/" + selectedCoursId;
 
   // Rediriger vers l'URL construite
   window.location.href = url;
