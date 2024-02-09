@@ -15,6 +15,7 @@
   </head>
   <body>
     <h1>Modifier les informations d'un Cavalier</h1>
+
     <form
       th:action="@{/cavaliers/editCavalier}"
       th:object="${cavalier}"
@@ -55,8 +56,10 @@
           th:field="*{niveau}"
           placeholder="${cavalier.niveau}" /></label
       ><br />
+
       <!-- Champ caché pour l'ID -->
-      <label><input type="hidden" th:field="*{id_cav}" /></label><br />
+      <input type="hidden" th:field="*{id_cav}" />
+      <br />
       <button type="submit">Enregistrer</button>
     </form>
 

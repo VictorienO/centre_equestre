@@ -47,7 +47,7 @@ public class CavalierController {
     }
 
     @GetMapping("/addMultipleCavaliers")
-    public String addMultipleCavalierCSV(Model model) {
+    public String addMultipleCavaliersCSV(Model model) {
         return "cavaliers/addMultipleCavaliers";
     }
 
@@ -71,14 +71,27 @@ public class CavalierController {
     @GetMapping("/editCavalier/{id}")
     public String editCavalierForm(@PathVariable Long id, Model model) {
         Optional<Cavalier> cavalier = cavalierService.findById(id);
+        List<Cours> allCours = coursService.findAll();
         model.addAttribute("cavalier", cavalier.orElse(new Cavalier())); // Si l'id n'existe pas, création d'un nouvel objet Cavalier
+        model.addAttribute("allCours", allCours);
         return "cavaliers/editCavalier";
     }
 
     @PostMapping("/editCavalier")
     public String editCavalier(@ModelAttribute Cavalier cavalier) {
-        cavalierService.edit(cavalier);
-        return "redirect:/cavaliers"; // Redirection vers la liste des cavaliers
+        // Charger le cavalier existant à partir de la base de données
+        Optional<Cavalier> existingCavalierOptional = cavalierService.findById((long) cavalier.getId_cav());
+        if (existingCavalierOptional.isPresent()) {
+            Cavalier existingCavalier = existingCavalierOptional.get();
+            // Copier la liste des cours du cavalier existant dans le cavalier provenant du formulaire
+            cavalier.setCours(existingCavalier.getCours());
+            // Sauvegarder le cavalier modifié
+            cavalierService.edit(cavalier);
+            return "redirect:/cavaliers"; // Redirection vers la liste des cavaliers
+        } else {
+            // Gérer l'erreur si le cavalier n'existe pas
+            return "redirect:/cavaliers?error=cavalierNotFound";
+        }
     }
 
     @GetMapping("/delete/{id}")
@@ -88,16 +101,16 @@ public class CavalierController {
         return "redirect:/cavaliers";
     }
 
-    @GetMapping("/{id}/sesCours")
-    public String afficherCoursCavalier(@PathVariable("id") Long id, Model model) {
+    @GetMapping("/{id}/cours")
+    public String listCoursCavalier(@PathVariable("id") Long id, Model model) {
         Optional<Cavalier> optionalCavalier = cavalierService.findById(id);
         if (optionalCavalier.isPresent()) {
             Cavalier cavalier = optionalCavalier.get();
             List<Cours> coursCavalier = cavalierService.getCoursCavalier(cavalier);
             List<Cours> allCours = coursService.findAll();
-            model.addAttribute("sesCours", coursCavalier);
+            model.addAttribute("coursCavalier", coursCavalier);
             model.addAttribute("cavalier", cavalier);
-            model.addAttribute("listCours", allCours);
+            model.addAttribute("allCours", allCours);
             return "cavaliers/listCoursCavalier";
         } else {
             // Faire une pop up d'erreur !!
@@ -105,8 +118,8 @@ public class CavalierController {
         }
     }
 
-    @GetMapping("/{id_cav}/edit/{id_cours}")
-    public String addCours(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours) {
+    @GetMapping("/{id_cav}/subscribe/{id_cours}")
+    public String subscribeCoursCavaliers(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours) {
         Optional<Cavalier> optionalCavalier = cavalierService.findById(idCav);
         Optional<Cours> optionalCours = coursService.findById(idCours);
 
@@ -114,11 +127,31 @@ public class CavalierController {
             Cavalier cavalier = optionalCavalier.get();
             Cours cours = optionalCours.get();
 
-            // Ajouter le cours au cavalier
-            cavalierService.addCours(cavalier, cours);
+            // Inscrire le cavalier à un cours
+            cavalierService.subscribeCoursCavaliers(cavalier, cours);
 
             // Redirection vers la page des cours du cavalier avec l'ID du cavalier
-            return "redirect:/cavaliers/{id_cav}/sesCours";
+            return "redirect:/cavaliers/{id_cav}/cours";
+        } else {
+            // Gérer l'erreur si le cavalier ou le cours n'existe pas
+            return "redirect:/cavaliers?error=ioException";
+        }
+    }
+
+    @GetMapping("/{id_cav}/unsubscribe/{id_cours}")
+    public String unsubscribeCoursCavaliers(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours) {
+        Optional<Cavalier> optionalCavalier = cavalierService.findById(idCav);
+        Optional<Cours> optionalCours = coursService.findById(idCours);
+
+        if (optionalCavalier.isPresent() && optionalCours.isPresent()) {
+            Cavalier cavalier = optionalCavalier.get();
+            Cours cours = optionalCours.get();
+
+            // Inscrire le cavalier à un cours
+            cavalierService.unsubscribeCoursCavaliers(cavalier, cours);
+
+            // Redirection vers la page des cours du cavalier avec l'ID du cavalier
+            return "redirect:/cavaliers/{id_cav}/cours";
         } else {
             // Gérer l'erreur si le cavalier ou le cours n'existe pas
             return "redirect:/cavaliers?error=ioException";

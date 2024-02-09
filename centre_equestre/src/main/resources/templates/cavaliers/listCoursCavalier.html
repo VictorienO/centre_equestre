@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link href="/css/style.css" rel="stylesheet" />
-    <script src="/js/addCoursCavalier.js" defer></script>
+    <script src="/js/subscribeCoursCavalier.js" defer></script>
   </head>
   <body>
     <h1>
@@ -33,7 +33,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="cours : ${sesCours}">
+        <tr th:each="cours : ${coursCavalier}">
           <td th:text="${cours.discipline}"></td>
           <td th:text="${cours.date}"></td>
           <td th:text="${cours.heure}"></td>
@@ -43,7 +43,7 @@
           <td th:text="${cours.motineur}"></td>
           <td>
             <a
-              th:href="@{/cavaliers/{id_cav}/delete/{id_cours}(id_cav=${cavalier.id_cav}, id_cours=${cours.id_cours})}"
+              th:href="@{/cavaliers/{id_cav}/unsubscribe/{id_cours}(id_cav=${cavalier.id_cav}, id_cours=${cours.id_cours})}"
               >Désinscrire</a
             >
           </td>
@@ -57,7 +57,7 @@
         <select id="id_cours" name="cours">
           <option value="">-- Sélectionnez un cours --</option>
           <option
-            th:each="cours : ${listCours}"
+            th:each="cours : ${allCours}"
             th:value="${cours.id_cours}"
             th:text="${cours.discipline}"
           ></option>
@@ -73,10 +73,12 @@
     </div>
 
     <div class="listCours">
-      <a th:href="@{/cours}" class="custom-button">Voir le détail des cours</a>
+      <a th:href="@{/cours}" class="custom-button"
+        >Retour à la liste des cours</a
+      >
     </div>
 
-    <div class="listCavalier">
+    <div class="listCavaliers">
       <a th:href="@{/cavaliers}" class="custom-button"
         >Retour à la liste des cavaliers</a
       >

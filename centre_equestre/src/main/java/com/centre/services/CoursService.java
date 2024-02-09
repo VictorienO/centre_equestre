@@ -23,9 +23,7 @@ public class CoursService {
         repository.save(cours);
     }
 
-    public void edit(Cours cours) {  // pas testé avec persist !
-        repository.save(cours);
-    }
+    public void edit(Cours cours) { repository.save(cours); }
 
     public Optional<Cours> findById(Long id) {
         return repository.findById(id);
@@ -34,4 +32,9 @@ public class CoursService {
     public void delete(Cours cours) {
         repository.delete(cours);
     }
+
+    public List<Cavalier> getCavaliersCours(Cours cours) {
+        return cours.getCavaliers();
+    }
+
 }

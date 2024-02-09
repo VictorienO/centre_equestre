@@ -69,7 +69,7 @@ public class CoursController {
     }
 
     @GetMapping("/editCours/{id}")
-    public String editCavalierForm(@PathVariable Long id, Model model) {
+    public String editCoursForm(@PathVariable Long id, Model model) {
         Optional<Cours> cours = coursService.findById(id);
         model.addAttribute("cours", cours.orElse(new Cours())); // Si l'id n'existe pas, création d'un nouvel objet Cours
         return "cours/editCours";
@@ -77,8 +77,19 @@ public class CoursController {
 
     @PostMapping("/editCours")
     public String editCours(@ModelAttribute Cours cours) {
-        coursService.edit(cours);
-        return "redirect:/cours"; // Redirection vers la liste des cours
+        // Charger le cours existant à partir de la base de données
+        Optional<Cours> existingCoursOptional = coursService.findById((long) cours.getId_cours());
+        if (existingCoursOptional.isPresent()) {
+            Cours existingCours = existingCoursOptional.get();
+            // Copier la liste des cavaliers du cours existant dans le cours provenant du formulaire
+            cours.setCavaliers(existingCours.getCavaliers());
+            // Sauvegarder le cours modifié
+            coursService.edit(cours);
+            return "redirect:/cours"; // Redirection vers la liste des cours
+        } else {
+            // Gérer l'erreur si le cavalier n'existe pas
+            return "redirect:/cours?error=coursNotFound";
+        }
     }
 
     @GetMapping("/delete/{id}")
@@ -86,6 +97,21 @@ public class CoursController {
         Optional<Cours> cours = coursService.findById(id);
         cours.ifPresent(c -> coursService.delete(c));
         return "redirect:/cours";
+    }
+
+    @GetMapping("/{id}/cavaliers")
+    public String listCavaliersCours(@PathVariable("id") Long id, Model model) {
+        Optional<Cours> optionalCours = coursService.findById(id);
+        if (optionalCours.isPresent()) {
+            Cours cours = optionalCours.get();
+            List<Cavalier> CavaliersCours = coursService.getCavaliersCours(cours);
+            model.addAttribute("cavaliersCours", CavaliersCours);
+            model.addAttribute("cours", cours);
+            return "cours/listCavaliersCours";
+        } else {
+            // Faire une pop up d'erreur !!
+            return "redirect:/cavaliers";
+        }
     }
 
 }

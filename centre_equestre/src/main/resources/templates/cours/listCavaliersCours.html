@@ -25,11 +25,10 @@
           <th>Mail</th>
           <th>Date de naissance</th>
           <th>Niveau</th>
-          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr th:each="cavalier : ${cavaliers}">
+        <tr th:each="cavalier : ${cavaliersCours}">
           <td th:text="${cavalier.nom}"></td>
           <td th:text="${cavalier.prenom}"></td>
           <td th:text="${cavalier.mail}"></td>
@@ -41,11 +40,11 @@
 
     <div class="listCours">
       <a th:href="@{/cours}" class="custom-button"
-        >Retour à la liste des cavaliers</a
+        >Retour à la liste des cours</a
       >
     </div>
 
-    <div class="listCavalier">
+    <div class="listCavaliers">
       <a th:href="@{/cavaliers}" class="custom-button"
         >Retour à la liste des cavaliers</a
       >

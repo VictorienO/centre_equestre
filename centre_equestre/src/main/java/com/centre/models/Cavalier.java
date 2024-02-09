@@ -34,7 +34,7 @@ public class Cavalier {
             joinColumns = @JoinColumn(name = "id_cav"),
             inverseJoinColumns = @JoinColumn(name = "id_cours")
     )
-    private List<Cours> cours = new ArrayList<>();
+    private List<Cours> cours;
 
     public Cavalier(String nom, String prenom, String mail, String date_naiss, int niveau, List<Cours> cours) {
         this.nom = nom;

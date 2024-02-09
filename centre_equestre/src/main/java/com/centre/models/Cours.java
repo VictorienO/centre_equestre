@@ -33,7 +33,7 @@ public class Cours {
             joinColumns = @JoinColumn(name = "id_cours"),
             inverseJoinColumns = @JoinColumn(name = "id_cav")
     )
-    private List<Cavalier> cavaliers = new ArrayList<>();
+    private List<Cavalier> cavaliers;
 
     public Cours(){}
 
@@ -116,7 +116,7 @@ public class Cours {
         return cavaliers;
     }
 
-    public void setcavaliers(List<Cavalier> cavaliers) {
+    public void setCavaliers(List<Cavalier> cavaliers) {
         this.cavaliers = cavaliers;
     }
 
