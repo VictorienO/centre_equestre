@@ -5,35 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a785ea37-271e-4aa8-8128-1dcba3ed96b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscriptionManagement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db_h2.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db_h2.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db_h2.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db_h2.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/db_h2.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CavalierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CavalierController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/controllers/CoursController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cavalier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/models/Cours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/services/CavalierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/services/CavalierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centre/services/CoursService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centre/services/CoursService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/addCoursCavalier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscribeCoursCavalier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/editCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCavaliers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/subscribeCoursCavalier.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/subscribeCoursCavalier.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCoursCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cavaliers/listCoursCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/editCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/listCavaliersCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/listCavaliersCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cours/listCours.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/centre/controllers/CavalierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/controllers/CavalierController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/centre/controllers/CoursController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/controllers/CoursController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/models/Cavalier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/models/Cours.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/models/Cours.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/services/CavalierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/services/CavalierService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/centre/services/CoursService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/centre/services/CoursService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/addCoursCavalier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/editCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCavaliers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCoursCavalier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cavaliers/listCoursCavalier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cours/editCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cours/editCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cours/listCavaliersCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cours/listCavaliersCours.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cours/listCours.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cours/listCours.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,20 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Application.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Claire",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/formation/Téléchargements/centre_equestre-vic-jeud/centre_equestre",
-    "settings.editor.selected.configurable": "preferences.externalResources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Claire&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/formation/Téléchargements/centre_equestre-vic-jeud/centre_equestre&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />

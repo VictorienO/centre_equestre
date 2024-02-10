@@ -107,19 +107,20 @@ public class CavalierController {
         if (optionalCavalier.isPresent()) {
             Cavalier cavalier = optionalCavalier.get();
             List<Cours> coursCavalier = cavalierService.getCoursCavalier(cavalier);
-            List<Cours> allCours = coursService.findAll();
+            List<Cours> coursUnsubscribe = coursService.findAll();
+            coursUnsubscribe.removeAll(coursCavalier); // Retirer les cours auxquels le cavalier est déjà inscrit
             model.addAttribute("coursCavalier", coursCavalier);
             model.addAttribute("cavalier", cavalier);
-            model.addAttribute("allCours", allCours);
+            model.addAttribute("coursUnsubscribe", coursUnsubscribe);
             return "cavaliers/listCoursCavalier";
         } else {
-            // Faire une pop up d'erreur !!
-            return "redirect:/cavaliers";
+            // Gérer l'erreur si le cavalier n'existe pas
+            return "redirect:/cavaliers?error=cavalierNotFound";
         }
     }
 
     @GetMapping("/{id_cav}/subscribe/{id_cours}")
-    public String subscribeCoursCavaliers(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours) {
+    public String subscribeCoursCavaliers(@PathVariable("id_cav") Long idCav, @PathVariable("id_cours") Long idCours, Model model) {
         Optional<Cavalier> optionalCavalier = cavalierService.findById(idCav);
         Optional<Cours> optionalCours = coursService.findById(idCours);
 
@@ -127,14 +128,27 @@ public class CavalierController {
             Cavalier cavalier = optionalCavalier.get();
             Cours cours = optionalCours.get();
 
-            // Inscrire le cavalier à un cours
-            cavalierService.subscribeCoursCavaliers(cavalier, cours);
+            // Si le cavalier n'a pas le niveau requis => msg d'erreur
+            if (cavalier.getNiveau() < cours.getNiveau_requis()) {
+                String errorMessage = "Erreur : Ce cavalier n'a pas le niveau minimum requis pour s'inscrire a ce cours.";
+                return "redirect:/cavaliers/{id_cav}/cours?error="+errorMessage;
+            }
 
-            // Redirection vers la page des cours du cavalier avec l'ID du cavalier
-            return "redirect:/cavaliers/{id_cav}/cours";
+            // Si le cours est déjà rempli => msg d'erreur + ajout à la liste d'attente
+            else if (cours.getCavaliers().size() == cours.getNbr_cavalier_max()) {
+                String errorMessage = "Erreur : Le cours est deja complet. Vous avez ete ajoute a la liste d'attente.";
+                return "redirect:/cavaliers/{id_cav}/cours?error="+errorMessage;
+            }
+
+            // Sinon inscription au cours !
+            else {
+                cavalierService.subscribeCoursCavaliers(cavalier, cours);
+                return "redirect:/cavaliers/{id_cav}/cours";
+            }
+
         } else {
             // Gérer l'erreur si le cavalier ou le cours n'existe pas
-            return "redirect:/cavaliers?error=ioException";
+            return "redirect:/cavaliers?error=cavalierORcoursNotFound";
         }
     }
 
@@ -154,7 +168,7 @@ public class CavalierController {
             return "redirect:/cavaliers/{id_cav}/cours";
         } else {
             // Gérer l'erreur si le cavalier ou le cours n'existe pas
-            return "redirect:/cavaliers?error=ioException";
+            return "redirect:/cavaliers?error=cavalierORcoursNotFound";
         }
     }
 

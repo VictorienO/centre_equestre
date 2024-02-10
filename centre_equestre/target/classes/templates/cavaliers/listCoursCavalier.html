@@ -13,6 +13,7 @@
     />
     <link href="/css/style.css" rel="stylesheet" />
     <script src="/js/subscribeCoursCavalier.js" defer></script>
+    <script src="/js/subscriptionManagement.js" defer></script>
   </head>
   <body>
     <h1>
@@ -57,7 +58,7 @@
         <select id="id_cours" name="cours">
           <option value="">-- Sélectionnez un cours --</option>
           <option
-            th:each="cours : ${allCours}"
+            th:each="cours : ${coursUnsubscribe}"
             th:value="${cours.id_cours}"
             th:text="${cours.discipline}"
           ></option>
@@ -84,4 +85,5 @@
       >
     </div>
   </body>
+
 </html>

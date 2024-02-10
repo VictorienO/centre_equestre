@@ -63,9 +63,9 @@ public class CoursController {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return "redirect:/cavaliers?error=ioException";
+            return "redirect:/cours?error=ioException";
         }
-        return "redirect:/cavaliers";
+        return "redirect:/cours";
     }
 
     @GetMapping("/editCours/{id}")
@@ -87,7 +87,7 @@ public class CoursController {
             coursService.edit(cours);
             return "redirect:/cours"; // Redirection vers la liste des cours
         } else {
-            // Gérer l'erreur si le cavalier n'existe pas
+            // Gérer l'erreur si le cours n'existe pas
             return "redirect:/cours?error=coursNotFound";
         }
     }
@@ -109,8 +109,8 @@ public class CoursController {
             model.addAttribute("cours", cours);
             return "cours/listCavaliersCours";
         } else {
-            // Faire une pop up d'erreur !!
-            return "redirect:/cavaliers";
+            // Gérer l'erreur si le cours n'existe pas
+            return "redirect:/cours?error=coursNotFound";
         }
     }
 
